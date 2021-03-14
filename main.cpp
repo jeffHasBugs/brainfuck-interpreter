@@ -7,7 +7,7 @@
 
 //#define DEBUG
 
-const int MEM_SIZE = 8192;
+const int MEM_SIZE = 30001;
 
 int main(int argc, char *argv[])
 {
