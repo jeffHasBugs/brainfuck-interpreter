@@ -36,8 +36,10 @@ int main(int argc, char *argv[])
     for (; bfPtr != buf.end(); ++bfPtr) {
         // skip
         if (*bfPtr == '[' && *ptr == 0) ++skip;
-        if (*bfPtr == ']' && skip) --skip;
-        if (skip) continue;
+        if (skip) {
+            if (*bfPtr == ']') --skip;
+            continue;
+        }
 
         switch (*bfPtr)
         {
